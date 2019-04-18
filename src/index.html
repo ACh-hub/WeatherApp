@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>###tytuł roboczy### Portfolio</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./temp/css/styles.css">
+</head>
+
+<body>
+    <div class="hero page-section" data-matching-link="#home_link" id="home">
+        <h1>Hero section cinegraph? animation? gradients in the background? + cta</h1>
+        <a class="btn btn--yellow btn--big" href="#">Meet me</a>
+        <div class="mouse">
+            <div class="mouse__icon">
+                <span class="mouse__text">Scroll</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main-nav">
+        <a href="#home" class="main-nav__link active" id="home_link">Home</a>
+        <a href="#about" class="main-nav__link" id="about_link">About</a>
+        <a href="#portfolio" class="main-nav__link" id="portfolio_link">Portfolio</a>
+        <a href="#contact" class="main-nav__link" id="contact_link">Contact</a>
+    </div>
+    
+    <div class="about page-section" data-matching-link="#about_link" id="about">
+        <h1>About section</h1>
+        <p>Design: Mobile first design, RWD, Photoshop, Figma</p>
+        <p>Development: HTML5, CSS3, SASS, JS (ES6), JQUERY, NODE.JS, EXPRESS, GULP, WEBPACK, GIT, VS CODE, ATOM, WEB STORM</p>
+    </div>
+    <div class="portfolio page-section" data-matching-link="#portfolio_link" id="portfolio">
+        <h1>Portfolio section</h1>
+    </div>
+    <div class="contact page-section" data-matching-link="#contact_link" id="contact">
+        <div class="contact__wrapper">
+            <h1 class="contact__title">Contact</h1>
+            <form class="contact__form" action="#">
+                <div class="contact__subtitle">Contact contact contact</div>
+                <input class="contact__input" type="text" name="name" value="" placeholder="Name" required>
+                <input class="contact__input"type="email" name="email" value="" placeholder="Email" required>
+                <textarea class="contact__message" name="message" placeholder="Your message"></textarea>
+                <a class="btn btn--yellow contact__submit" href="#" onclick="">Submit</a>
+            </form>
+        </div>
+    </div>
+    
+    
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script src="./temp/scripts/app.js"></script>
+        
+    </body>
+    </html>
