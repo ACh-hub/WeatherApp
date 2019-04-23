@@ -1,0 +1,19 @@
+.sidebar {
+    grid-area: sidebar;
+    background-color: crimson;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: chartreuse;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 75% auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header"
+        "main sidebar"
+        "footer footer";
+}

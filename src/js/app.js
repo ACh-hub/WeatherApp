@@ -1,5 +1,5 @@
-import StickyNavBar from "./modules/StickyNavBar";
 
-"use strict";
+import Weather from "./modules/weather";
 
-const stickyNavBar = new StickyNavBar();
+const weather = new Weather();
+console.log(weather.getWeather());
