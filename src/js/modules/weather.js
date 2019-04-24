@@ -1,10 +1,15 @@
-
 export default class Weather {
-    constructor() {}
 
-    async getWeather() {
-        const response = await fetch('http://192.168.1.29:3000/weather/2019-4-24');
-        const responseData = await response.json();
-        return responseData;
+    async updateCurrentWeather(data) {
+        this.station = data.stationID;
+        this.temperature = data.temperature;
+        this.humidity = data.humidity;
+        this.pressure = data.pressure;
+        this.rain = data.rain;
+        this.brightness = data.brightness;
+        this.windDirection = data.windDirection;
+        this.windStrength = data.windStrength;
+        this.reportTime = data.reportTime;
+        return this;
     }
 }
