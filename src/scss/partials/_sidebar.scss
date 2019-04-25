@@ -1,0 +1,38 @@
+.temperature-chart  {
+    grid-area: temperature-chart;
+}
+
+.pressure-chart  {
+    grid-area: pressure-chart;
+}
+
+.humidity-chart {
+    grid-area: humidity-chart;
+}
+
+.rain-chart {
+    grid-area: rain-chart;
+}
+
+.light-chart {
+    grid-area: light-chart;
+}
+
+.wind-chart {
+    grid-area: wind-chart;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "temperature-chart"
+    "pressure-chart"
+    "humidity-chart"
+    "rain-chart"
+    "light-chart"
+    "wind-chart";
+    background-color: crimson;
+}
