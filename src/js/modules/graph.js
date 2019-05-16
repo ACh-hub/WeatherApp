@@ -1,25 +1,28 @@
-import Weather from "../modules/weather";
+import Chart from 'chart.js';
 
 export default class Graph {
 
-    constructor() {
-        this.graphData = [];
+    constructor(context, setup){
+        this.chart = new Chart(context,setup);
     }
 
-    async updateGraphs(data) {
+    async updateGraph(data) {
+        //Clear data
+        this.chart.data.labels = [];
+        this.chart.data.datasets[0].data = [];
+        this.chart.data.datasets[1].data = [];
+        this.chart.data.datasets[2].data = [];
 
-        // Get needed data from data source
+
         data.forEach((reading) => {
-            const dataPoint = new Weather(
-                reading.temperature,
-                reading.humidity,
-                reading.pressure,
-                reading.brightness,
-                reading.reportTime
-            );
-            this.graphData.push(dataPoint);
+            this.chart.data.labels.push(reading.reportTime);
+            //Update datasets
+            this.chart.data.datasets[0].data.push(reading.temperature);
+            this.chart.data.datasets[1].data.push(reading.humidity);
+            this.chart.data.datasets[2].data.push(reading.pressure);
         });
 
+        this.chart.update();
         return this;
     }
 }
