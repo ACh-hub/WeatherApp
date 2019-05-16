@@ -1,5 +1,6 @@
 export default class Ui {
     constructor(){
+        this.mainChartGridArea = document.querySelector(".main-chart");
         this.stationGridArea = document.querySelector(".station");
         this.temperatureGridArea = document.querySelector(".temperature");
         this.humidityGridArea = document.querySelector(".humidity");
@@ -12,6 +13,7 @@ export default class Ui {
     }
 
     async updateUi(weather) {
+        this.mainChartGridArea.innerHTML = "Blah blah balh";
         this.stationGridArea.innerHTML = weather.station;
         this.temperatureGridArea.innerHTML = weather.temperature;
         this.humidityGridArea.innerHTML = weather.humidity;

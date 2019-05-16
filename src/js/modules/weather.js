@@ -1,5 +1,20 @@
 export default class Weather {
 
+    constructor(
+        temperature,
+        humidity,
+        pressure,
+        brightness,
+        reportTime
+        )
+        {
+        this.temperature = temperature;
+        this.humidity = humidity;
+        this.pressure = pressure;
+        this.brightness = brightness;
+        this.reportTime = reportTime;
+    }
+
     async updateCurrentWeather(data) {
         this.station = data.stationID;
         this.temperature = data.temperature;
