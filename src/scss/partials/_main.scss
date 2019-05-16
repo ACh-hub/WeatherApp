@@ -1,9 +1,6 @@
 .main-chart {
     grid-area: main-chart;
 
-    #main-chart-canvas{
-
-    }
 }
 
 .switch {
@@ -15,9 +12,13 @@
     display: grid;
     background-color: darkcyan;
 
-        grid-template-columns: auto;
-        grid-template-rows: auto 2rem;
-        grid-template-areas:
-            "main-chart"
-            "switches";
+    grid-template-columns: 75vw;
+    grid-template-rows: auto 2rem;
+    grid-template-areas:
+        "main-chart"
+        "switches";
+
+    @include phone {
+        grid-template-columns: 100vw;
+    }
 }
