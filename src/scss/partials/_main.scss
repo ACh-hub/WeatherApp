@@ -1,37 +1,19 @@
-
-.temperature {
-    grid-area: temperature;
+.main-chart {
+    grid-area: main-chart;
 }
 
-.pressure {
-    grid-area: pressure;
-}
-
-.humidity {
-    grid-area: humidity;
-}
-
-.rain {
-    grid-area: rain;
-}
-
-.light {
-    grid-area: light;
-}
-
-.wind {
-    grid-area: wind;
+.switch {
+    grid-area: switch;
 }
 
 .main {
     grid-area: main;
     display: grid;
-
-    grid-template-columns: 50% auto;
-    grid-template-rows: auto;
-    grid-template-areas:
-        "temperature pressure"
-        "humidity rain"
-        "light wind";
     background-color: darkcyan;
+
+        grid-template-columns: auto;
+        grid-template-rows: auto 25%;
+        grid-template-areas:
+            "main-chart"
+            "switches";
 }
