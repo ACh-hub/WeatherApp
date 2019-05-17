@@ -6,15 +6,13 @@ import "../scss/styles.scss";
 import Ui from "./modules/ui";
 import ApiCall from "./modules/apicall";
 import Weather from "./modules/weather";
-import GraphSetup from "./modules/graphsetup";
 import Graph from "./modules/graph";
 
 const ui = new Ui();
 const apicall = new ApiCall();
 const weather = new Weather();
 const context = ui.mainChartContext;
-const graphsetup = new GraphSetup();
-const mainGraph = new Graph(context, graphsetup.setup);
+const mainGraph = new Graph(context);
 
 const updateAll = async () => {
     const r = await apicall.getCurrentWeather();
