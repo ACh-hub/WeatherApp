@@ -9,10 +9,9 @@ export default class Graph {
     async updateGraph(data) {
         //Clear data
         this.chart.data.labels = [];
-        this.chart.data.datasets[0].data = [];
-        this.chart.data.datasets[1].data = [];
-        this.chart.data.datasets[2].data = [];
-
+        for(let it in this.chart.data.datasets){
+            this.chart.data.datasets[it].data = [];
+        }
 
         data.forEach((reading) => {
             this.chart.data.labels.push(reading.reportTime);

@@ -3,9 +3,6 @@
 
 }
 
-.switch {
-    grid-area: switch;
-}
 
 .main {
     grid-area: main;
@@ -13,10 +10,9 @@
     background-color: darkcyan;
 
     grid-template-columns: 75vw;
-    grid-template-rows: auto 2rem;
+    grid-template-rows: auto;
     grid-template-areas:
-        "main-chart"
-        "switches";
+        "main-chart";
 
     @include phone {
         grid-template-columns: 100vw;
