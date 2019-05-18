@@ -1,37 +1,20 @@
+.main-chart {
+    grid-area: main-chart;
 
-.temperature {
-    grid-area: temperature;
 }
 
-.pressure {
-    grid-area: pressure;
-}
-
-.humidity {
-    grid-area: humidity;
-}
-
-.rain {
-    grid-area: rain;
-}
-
-.light {
-    grid-area: light;
-}
-
-.wind {
-    grid-area: wind;
-}
 
 .main {
     grid-area: main;
     display: grid;
+    background-color: darkcyan;
 
-    grid-template-columns: 50% auto;
+    grid-template-columns: 75vw;
     grid-template-rows: auto;
     grid-template-areas:
-        "temperature pressure"
-        "humidity rain"
-        "light wind";
-    background-color: darkcyan;
+        "main-chart";
+
+    @include phone {
+        grid-template-columns: 100vw;
+    }
 }

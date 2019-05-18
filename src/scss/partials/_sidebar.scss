@@ -1,25 +1,25 @@
-.temperature-chart  {
-    grid-area: temperature-chart;
+.temperature  {
+    grid-area: temperature;
 }
 
-.pressure-chart  {
-    grid-area: pressure-chart;
+.pressure  {
+    grid-area: pressure;
 }
 
-.humidity-chart {
-    grid-area: humidity-chart;
+.humidity {
+    grid-area: humidity;
 }
 
-.rain-chart {
-    grid-area: rain-chart;
+.rain {
+    grid-area: rain;
 }
 
-.light-chart {
-    grid-area: light-chart;
+.light {
+    grid-area: light;
 }
 
-.wind-chart {
-    grid-area: wind-chart;
+.wind {
+    grid-area: wind;
 }
 
 .sidebar {
@@ -28,11 +28,11 @@
     grid-template-columns: auto;
     grid-template-rows: auto;
     grid-template-areas:
-    "temperature-chart"
-    "pressure-chart"
-    "humidity-chart"
-    "rain-chart"
-    "light-chart"
-    "wind-chart";
+    "temperature"
+    "pressure"
+    "humidity"
+    "rain"
+    "light"
+    "wind";
     background-color: crimson;
 }
