@@ -25,6 +25,8 @@ export default class Weather {
         this.windDirection = data.windDirection;
         this.windStrength = data.windStrength;
         this.reportTime = data.reportTime;
+        this.actualDate = new Date(this.reportTime).toLocaleString();
         return this;
     }
 }
+

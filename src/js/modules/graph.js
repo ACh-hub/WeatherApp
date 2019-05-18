@@ -22,6 +22,11 @@ export default class Graph {
             }]
         };
 
+        this.colorConfig = {
+
+
+        };
+
         this.setup = {
             type: 'line',
             data: {
@@ -70,7 +75,8 @@ export default class Graph {
         }
 
         data.forEach((reading) => {
-            this.chart.data.labels.push(reading.reportTime);
+            let actualDate = new Date(reading.reportTime).toLocaleTimeString();
+            this.chart.data.labels.push(actualDate);
             //Update datasets
             this.chart.data.datasets[0].data.push(reading.temperature);
             this.chart.data.datasets[1].data.push(reading.humidity);

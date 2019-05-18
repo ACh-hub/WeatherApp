@@ -19,7 +19,7 @@ export default class Ui {
         this.stationGridArea.innerHTML = weather.station;
         this.temperatureGridArea.innerHTML = weather.temperature;
         this.humidityGridArea.innerHTML = weather.humidity;
-        this.timeGridArea.innerHTML = weather.reportTime;
+        this.timeGridArea.innerHTML = weather.actualDate;
         this.pressureGridArea.innerHTML = weather.pressure;
         this.rainGridArea.innerHTML = weather.rain;
         this.lightGridArea.innerHTML = weather.brightness;
