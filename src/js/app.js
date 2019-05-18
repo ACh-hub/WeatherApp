@@ -9,6 +9,7 @@ import Weather from "./modules/weather";
 import Graph from "./modules/graph";
 
 const ui = new Ui();
+
 const apicall = new ApiCall();
 const weather = new Weather();
 const context = ui.mainChartContext;

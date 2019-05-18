@@ -41,14 +41,8 @@ $xxlarge-desktop-width: 160em; //2560px
   }
 }
 
-@mixin section-styling() {
-  width: 100%;
-  background-size: cover;
-  display: table;
-  background-attachment: fixed;
-}
 
-@mixin horizontal-middle() {
+@mixin horizontal-middle {
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
