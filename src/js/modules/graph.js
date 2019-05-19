@@ -4,22 +4,39 @@ export default class Graph {
 
     constructor(context){
 
+        this.container = document.querySelector("#main-chart-canvas");
+
         this.scalesConfig = {
             yAxes: [{
                 id: 'TemperatureY',
                 type: 'linear',
-                position: 'left'
+                position: 'left',
+                gridLines: {
+                    display: false
+                    }
             },
             {
                 id: 'HumidityY',
                 type: 'linear',
-                position: 'right'
+                position: 'right',
+                gridLines: {
+                    display: false
+                    }
             },
             {
                 id: 'PressureY',
                 type: 'linear',
-                position: 'right'
-            }]
+                position: 'right',
+                gridLines: {
+                    display: false
+                    }
+            }],
+            xAxes: [{
+                gridLines: {
+                display: false
+                }
+
+                }]
         };
 
         this.colorConfig = {
@@ -35,16 +52,16 @@ export default class Graph {
                 datasets: [{
                         label: "Temperature",
                         yAxisID: 'TemperatureY',
-                        backgroundColor: 'rgba(255, 99, 132, 0.6)',
-                        borderColor: 'rgb(255, 99, 132)',
+                        backgroundColor: 'rgba(128,64,64, 0.3)',
+                        borderColor: 'rgb(128,64,64)',
                         //Updated dynamically
                         data: [],
                     },
                     {
                         label: "Humidity",
                         yAxisID: 'HumidityY',
-                        backgroundColor: 'rgba(10, 30, 132, 0.6)',
-                        borderColor: 'rgb(56, 99, 132)',
+                        backgroundColor: 'rgba(216,192,144, 0.3)',
+                        borderColor: 'rgb(216,192,144)',
                         //Updated dynamically
                         data: [],
                     }
@@ -52,20 +69,46 @@ export default class Graph {
                     {
                         label: "Pressure",
                         yAxisID: 'PressureY',
-                        backgroundColor: 'rgba(10, 56, 44, 0.6)',
-                        borderColor: 'rgb(56, 99, 20)',
+                        backgroundColor: 'rgba(136,144,144,0.3)',
+                        borderColor: 'rgb(136,144,144)',
                         //Updated dynamically
                         data: [],
+
                     }
                 ]
             },
             options:{
-                scales: this.scalesConfig
+                scales: this.scalesConfig,
+                onHover: function(evt) {
+                    if(evt.type=='mouseout'){
+                        for(let it in this.chart.config.options.scales.xAxes){
+                            this.chart.config.options.scales.xAxes[it].gridLines.display = false;
+                        }
+                        for(let it in this.chart.config.options.scales.yAxes){
+                            this.chart.config.options.scales.yAxes[it].gridLines.display = false;
+                        }
+                        this.chart.update();
+                    }
+                    if(evt.type=='mousemove') {
+                        for(let it in this.chart.config.options.scales.xAxes){
+                            this.chart.config.options.scales.xAxes[it].gridLines.display = true;
+                        }
+                        for(let it in this.chart.config.options.scales.yAxes){
+                            this.chart.config.options.scales.yAxes[it].gridLines.display = true;
+                        }
+                        this.chart.update();
+                    }
+
+                  }
             }
+
         };
 
         this.chart = new Chart(context,this.setup);
+
     }
+
+
 
     async updateGraph(data) {
         //Clear data

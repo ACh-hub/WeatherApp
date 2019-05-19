@@ -14,7 +14,6 @@ export default class Ui {
 
     }
 
-
     async updateUi(weather) {
 
         this.stationName.innerHTML =
