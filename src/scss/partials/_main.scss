@@ -1,5 +1,6 @@
 .main-chart {
     grid-area: main-chart;
+    background-color: transparent;
 
 }
 
@@ -7,7 +8,7 @@
 .main {
     grid-area: main;
     display: grid;
-    background-color: darkcyan;
+
 
     grid-template-columns: 75vw;
     grid-template-rows: auto;

@@ -1,6 +1,10 @@
 .container {
     display: grid;
 
+    position: fixed;
+    top: 0;
+    width: 100vw;
+
     grid-template-columns: 75vw auto;
     grid-template-rows: auto;
     grid-template-areas:
